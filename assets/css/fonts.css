@@ -1,0 +1,33 @@
+/* Montserrat */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* IBM Plex Sans */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('../fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('../fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

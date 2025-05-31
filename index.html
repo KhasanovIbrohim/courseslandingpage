@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+</head>
+
+<body>
+    <nav class="main_menu_navbar" id="navbar">
+        <div class="container">
+            <div class="navbar">
+                <h3 class="navbar_logo">Logo</h3>
+                <ul class="navbar_menu" id="mobile_no">
+                    <li class="navbar_link">
+                        <a href="./assets/pages/courses.html">Курсы</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Школы</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Отзывы о школах</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Акции школ</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+                <ul class="navbar_mobile_menu">
+                    <div>
+                        <button class="close_mobile_burger" onclick="closeNavbarBurger()"><img src="./assets/images/closeButton.svg" alt="icon"></button>
+                    </div>
+                    <li>
+                        <a href="./assets/pages/courses.html">Курсы</a>
+                    </li>
+                    <li>
+                        <a href="#">Школы</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о школах</a>
+                    </li>
+                    <li>
+                        <a href="#">Акции школ</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+                <div class="navbar_search_container">
+                    <button class="navbar_exchange_button"> <img src="./assets/images/exchange.png" alt="exchnge">
+                    </button>
+                    <img class="navbar_search_img" src="./assets/images/search.svg" alt="searchSVG">
+                    <input class="navbar_search_input" type="text" placeholder="Искать курсы">
+                    <button class="navbar_burger_menu_button" onclick="openNavbarBurger()"><img src="./assets/images/burgerMenu.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero_box">
+                <h2 class="hero_box_title">Агрегатор онлайн-курсов</h2>
+                <p class="hero_box_text">Сравниваем онлайн-курсы по digital и IT. Мы — каталог-отзовик курсов. Выбирайте курсы по отзывам, цене, продолжительности и другим критериям!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="components">
+        <div class="container">
+            <h2 class="components_title">Наши преимущества</h2>
+            <div class="components_container">
+                <div class="components_box">
+                    <div>
+                        <img src="./assets/images/componentsFirst.png" alt="components_box_img">
+                        <h3>Большой выбор<br>онлайн-курсов</h3>
+                    </div>
+                    <p>Мы аккумулируем большое количество онлайн-курсов по различным направлениям, позволяя сравнивать их, и выбирать то, что вам нравится</p>
+                </div>
+                <div class="components_box">
+                    <div>
+                        <img src="./assets/images/componentsSecond.png" alt="components_box_img">
+                        <h3>Актуальная<br>информация</h3>
+                    </div>
+                    <p>Мы регулярно обновляем наши базы данных, чтобы предоставлять вам только самую свежую информацию о новых курсах, старте обучения, скидках и предложениях от онлайн-школ</p>
+                </div>
+                <div class="components_box">
+                    <div>
+                        <img src="./assets/images/componentsThird.png" alt="components_box_img">
+                        <h3>Скорость<br>поиска</h3>
+                    </div>
+                    <p>Агрегатор курсов создан для экономии вашего времени. Вы можете с легкостью найти подходящий курс в нашем каталоге по различным фильтрам</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses">
+        <div class="container">
+            <h2 class="courses_title">Направления курсов</h2>
+            <div class="courses_container">
+                <div class="courses_container_left">
+                    <button class="courses_container_left_button course_button_1" id="course_selected" onclick="courseSelector(1)">Программирование</button>
+                    <button class="courses_container_left_button course_button_2" onclick="courseSelector(2)">Маркетинг</button>
+                    <button class="courses_container_left_button course_button_3" onclick="courseSelector(3)">Дизайн</button>
+                    <button class="courses_container_left_button course_button_4" onclick="courseSelector(4)">Аналитика</button>
+                    <button class="courses_container_left_button course_button_5" onclick="courseSelector(5)">Финансы</button>
+                    <button class="courses_container_left_button course_button_6" onclick="courseSelector(6)">Управление</button>
+                    <button class="courses_container_left_button course_button_7" onclick="courseSelector(7)">Контент-маркетинг</button>
+                </div>
+                <div class="courses_container_right">
+                    <div class="courses_container_right_box" id="courses_1">
+                        <div class="courses_container_right_mini">
+                            <h4>Все курсы по программированию</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Python-разработка</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Web-разработка</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+
+                        <div class="courses_container_right_mini">
+                            <h4>Мобильная разработка</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>JavaScript-разработка</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Java-разработка</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+
+                        <div class="courses_container_right_mini">
+                            <h4>Разработка игр</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Создание сайтов</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Системное администрирование</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="courses_container_right_box" id="courses_2">
+                        <div class="courses_container_right_mini">
+                            <h4>Дальше пишите что угодно</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Главное работает:)</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                        <div class="courses_container_right_mini">
+                            <h4>Маркетинг</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="courses_container_right_box" id="courses_3">
+                        <div class="courses_container_right_mini">
+                            <h4>Дизайн</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="courses_container_right_box" id="courses_4">
+                        <div class="courses_container_right_mini">
+                            <h4>Аналитика</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="courses_container_right_box" id="courses_5">
+                        <div class="courses_container_right_mini">
+                            <h4>Финансы</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="courses_container_right_box" id="courses_6">
+                        <div class="courses_container_right_mini">
+                            <h4>Управление</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="courses_container_right_box" id="courses_7">
+                        <div class="courses_container_right_mini">
+                            <h4>Контент-маркетинг</h4>
+                            <img src="./assets/images/coursesArrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="platforms">
+        <div class="container">
+            <h2 class="platforms_title">Школы</h2>
+            <div class="platforms_container">
+                <button class="platforms_prev" onclick="platformsCarusel(`prev`, 0)"><</button>
+                <div class="platforms_carousel">
+                    <div class="platforms_carousel_box" id="platforms_carousel_1">
+                        <div class="platforms_carousel_mini">
+                            <img src="./assets/images/netologyLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="mobile_no">
+                            <img src="./assets/images/skillFactoryLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/otusLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/geekBrainsLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                    </div>
+                    <div class="platforms_carousel_box" id="platforms_carousel_2">
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/skillFactoryLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" >
+                            <img src="./assets/images/netologyLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/otusLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="mobile_no">
+                            <img src="./assets/images/geekBrainsLogo.png" alt="platforms_carousel_box_img"> 
+                        </div>
+                    </div>
+                    <div class="platforms_carousel_box" id="platforms_carousel_3">
+                        <div class="platforms_carousel_mini">
+                            <img src="./assets/images/otusLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/geekBrainsLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/skillFactoryLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="mobile_no">
+                            <img src="./assets/images/netologyLogo.png" alt="platforms_carousel_box_img">
+                        </div> 
+                    </div>
+                    <div class="platforms_carousel_box" id="platforms_carousel_4">
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/skillFactoryLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="mobile_no">
+                            <img src="./assets/images/otusLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini">
+                            <img src="./assets/images/geekBrainsLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                        <div class="platforms_carousel_mini" id="tablet_no">
+                            <img src="./assets/images/netologyLogo.png" alt="platforms_carousel_box_img">
+                        </div>
+                    </div>
+                </div>
+                <button class="platforms_next" onclick="platformsCarusel(`next`, 0)">></button>
+            </div>
+            <div class="platforms_dots">
+                <div class="platforms_dot platforms_dot_1" id="platforms_dots_active"></div>
+                <div class="platforms_dot platforms_dot_2" style="margin-left: 12px;"></div>
+                <div class="platforms_dot platforms_dot_3" style="margin-left: 12px;"></div>
+                <div class="platforms_dot platforms_dot_4" style="margin-left: 12px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collections">
+        <div class="container">
+            <h2 class="collections_title">Популярные онлайн-курсы</h2>
+            <div class="collections_links">
+                <button class="collections_link collections_link_1">Программирование</button>
+                <button class="collections_link collections_link_2">Маркетинг</button>
+                <button class="collections_link collections_link_3">Дизайн</button>
+                <button class="collections_link collections_link_4">Аналитика</button>
+                <button class="collections_link collections_link_5">Финансы</button>
+                <button class="collections_link collections_link_6">Управление</button>
+                <button class="collections_link collections_link_7" id="tablet_no">Контент-маркетинг</button>
+                <button class="collections_link collections_link_8" id="tablet_no">Иностранные языки</button>
+            </div>
+            <div class="collections_render">
+                <div class="collections_render_box">
+                    <div>
+                        <h2>Профессия<br>веб-разработчик</h2>
+                    </div>
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h4><img src="./assets/images/starIcon.svg" alt=""> 4.5</h4>
+                        <p>Отзывы о школе 58</p>
+                    </div>
+                    <div>
+                        <h3>85 000</h3>
+                        <h2>66 800 руб</h2>
+                        <p>от 4 745 руб./месяц</p>
+                    </div>
+                    <div>
+                        <img src="./assets/images/clockIcon.svg" alt="clock">
+                        <h2>В любое<br>время</h2>
+                    </div>
+                    <div>
+                        <h4><img src="./assets/images/calendarIcon.svg" alt="icon">3 месяца</h4>
+                        <h4><img src="./assets/images/traficIcon.svg" alt="icon">Начальный</h4>
+                        <h4><img src="./assets/images/caseIcon.svg" alt="icon">Стажировка</h4>
+                        <h4><img src="./assets/images/diplomaIcon.svg" alt="icon">Диплом</h4>
+                    </div>
+                    <div>
+                        <a href="#">На сайт курса</a>
+                        <a href="#">Подробнее</a>
+                        <a href="#"><img src="./assets/images/shuffleIcon.svg" alt="icon">Добавить к сравнению</a>
+                    </div>
+                </div>
+                <div class="collections_render_box">
+                    <div>
+                        <h2>Профессия<br>веб-разработчик</h2>
+                    </div>
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h4><img src="./assets/images/starIcon.svg" alt=""> 4.5</h4>
+                        <p>Отзывы о школе 58</p>
+                    </div>
+                    <div>
+                        <h3>85 000</h3>
+                        <h2>66 800 руб</h2>
+                        <p>от 4 745 руб./месяц</p>
+                    </div>
+                    <div>
+                        <img src="./assets/images/clockIcon.svg" alt="clock">
+                        <h2>В любое<br>время</h2>
+                    </div>
+                    <div>
+                        <h4><img src="./assets/images/calendarIcon.svg" alt="icon">3 месяца</h4>
+                        <h4><img src="./assets/images/traficIcon.svg" alt="icon">Начальный</h4>
+                        <h4><img src="./assets/images/caseIcon.svg" alt="icon">Стажировка</h4>
+                        <h4><img src="./assets/images/diplomaIcon.svg" alt="icon">Диплом</h4>
+                    </div>
+                    <div>
+                        <a href="#">На сайт курса</a>
+                        <a href="#">Подробнее</a>
+                        <a href="#"><img src="./assets/images/shuffleIcon.svg" alt="icon">Добавить к сравнению</a>
+                    </div>
+                </div>
+                <div class="collections_render_box" id="mobile_no">
+                    <div>
+                        <h2>Профессия<br>веб-разработчик</h2>
+                    </div>
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h4><img src="./assets/images/starIcon.svg" alt=""> 4.5</h4>
+                        <p>Отзывы о школе 58</p>
+                    </div>
+                    <div>
+                        <h3>85 000</h3>
+                        <h2>66 800 руб</h2>
+                        <p>от 4 745 руб./месяц</p>
+                    </div>
+                    <div>
+                        <img src="./assets/images/clockIcon.svg" alt="clock">
+                        <h2>В любое<br>время</h2>
+                    </div>
+                    <div>
+                        <h4><img src="./assets/images/calendarIcon.svg" alt="icon">3 месяца</h4>
+                        <h4><img src="./assets/images/traficIcon.svg" alt="icon">Начальный</h4>
+                        <h4><img src="./assets/images/caseIcon.svg" alt="icon">Стажировка</h4>
+                        <h4><img src="./assets/images/diplomaIcon.svg" alt="icon">Диплом</h4>
+                    </div>
+                    <div>
+                        <a href="#">На сайт курса</a>
+                        <a href="#">Подробнее</a>
+                        <a href="#"><img src="./assets/images/shuffleIcon.svg" alt="icon">Добавить к сравнению</a>
+                    </div>
+                </div>
+            </div>
+            <div class="collections_show_more">
+                <button>Посмотреть еще</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container">
+            <h2 class="blog_title">Блог</h2>
+            <div class="blog_container">
+                <div class="blog_box">
+                    <div class="blog_box_top">
+                        <h2>Онлайн курсы по маркетингу</h2>
+                    </div>
+                    <div class="blog_box_bottom">
+                        <h2>Топ-10 онлайн-курсов по интернет-<br>маркетингу Топ-10 онлайн-курсов<br>по интернет-маркетингу</h2>
+                        <div>
+                            <p>1 сентября</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_box">
+                    <div class="blog_box_top">
+                        <h2>Онлайн курсы по маркетингу</h2>
+                    </div>
+                    <div class="blog_box_bottom">
+                        <h2>Топ-10 онлайн-курсов<br>по интернет-маркетингу</h2>
+                        <div>
+                            <p>1 сентября</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_box">
+                    <div class="blog_box_top">
+                        <h2>Онлайн курсы по маркетингу</h2>
+                    </div>
+                    <div class="blog_box_bottom">
+                        <h2>Топ-10 онлайн-курсов<br>по интернет-маркетингу</h2>
+                        <div>
+                            <p>1 сентября</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_top">
+                <ul>
+                    <h2>КАТЕГОРИИ</h2>
+                    <li>
+                        <a href="#">Программирование</a>
+                    </li>
+                    <li>
+                        <a href="#">Маркетинг</a>
+                    </li>
+                    <li>
+                        <a href="#">Дизайн</a>
+                    </li>
+                    <li>
+                        <a href="#">Управление</a>
+                    </li>
+                    <li>
+                        <a href="#">Контент-маркетинг</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>ШКОЛЫ</h2>
+                    <li>
+                        <a href="#">Skillbox</a>
+                    </li>
+                    <li>
+                        <a href="#">Geekbrains</a>
+                    </li>
+                    <li>
+                        <a href="#">Нетология</a>
+                    </li>
+                    <li>
+                        <a href="#">Skillfactory</a>
+                    </li>
+                    <li>
+                        <a href="#">Convertmonster</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>ОТЗЫВЫ О ШКОЛАХ</h2>
+                    <li>
+                        <a href="#">Отзывы о Skillbox</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Geekbrains</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Нетология</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Skillfactory</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Convertmonster</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>КУРСЫ</h2>
+                    <li>
+                        <a href="#">С дипломом</a>
+                    </li>
+                    <li>
+                        <a href="#">С трудоустройстовом</a>
+                    </li>
+                    <li>
+                        <a href="#">Платные</a>
+                    </li>
+                    <li>
+                        <a href="#">Бесплатные</a>
+                    </li>
+                    <li>
+                        <a href="#">Ближайшие по дате старта</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>УРОВЕНЬ СЛОЖНОСТИ</h2>
+                    <li>
+                        <a href="#">Начальный</a>
+                    </li>
+                    <li>
+                        <a href="#">Средний</a>
+                    </li>
+                    <li>
+                        <a href="#">Профессиональный</a>
+                    </li>
+                    <li>
+                        <a href="#">Для детей</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <div>
+                    <h2>LOGO</h2>
+                    <h4>© 2021. Logo. Все права защищены</h4>
+                </div>
+                <div>
+                    <img src="./assets/images/vkLogo.svg" alt="logo">
+                    <img src="./assets/images/telegramLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <img src="./assets/images/instagramLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <img src="./assets/images/youtubeLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <img src="./assets/images/facebookLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <h3>Пользовательское соглашение</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/scripts/main.js"></script>
+</body>
+
+</html>

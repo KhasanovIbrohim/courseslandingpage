@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page - Courses</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <nav class="main_menu_navbar" id="navbar">
+        <div class="container">
+            <div class="navbar">
+                <h3 class="navbar_logo">Logo</h3>
+                <ul class="navbar_menu" id="mobile_no">
+                    <li class="navbar_link">
+                        <a href="#" style="color: var(--green);">Курсы</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Школы</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Отзывы о школах</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Акции школ</a>
+                    </li>
+                    <li class="navbar_link">
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+                <ul class="navbar_mobile_menu">
+                    <div>
+                        <button class="close_mobile_burger" onclick="closeNavbarBurger()"><img
+                                src="../images/closeButton.svg" alt="icon"></button>
+                    </div>
+                    <li>
+                        <a href="#" style="color: var(--green);">Курсы</a>
+                    </li>
+                    <li>
+                        <a href="#">Школы</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о школах</a>
+                    </li>
+                    <li>
+                        <a href="#">Акции школ</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+                <div class="navbar_search_container">
+                    <button class="navbar_exchange_button"> <img src="../images/exchange.png" alt="exchnge">
+                    </button>
+                    <img class="navbar_search_img" src="../images/search.svg" alt="searchSVG">
+                    <input class="navbar_search_input" type="text" placeholder="Искать курсы">
+                    <button class="navbar_burger_menu_button" onclick="openNavbarBurger()"><img
+                            src="../images/burgerMenu.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="courses_intro">
+        <div class="container">
+            <h3 class="courses_intro_title">Главная - <span>Онлайн-курсы</span></h3>
+            <h2 class="courses_intro_name">Онлайн-курсы</h2>
+            <p class="courses_intro_text">Список всех онлайн-курсов с рейтингом, отзывами и детальным описанием курса
+                2021 года. Для удобства поиска курса используйте фильтры, сортировку, сравнение и поиск. Мы обновляем
+                информацию о всех курсах каждую неделю.</p>
+            <div class="courses_intro_box">
+                <button class="courses_intro_box_button">Программирование</button>
+                <button class="courses_intro_box_button">Маркетинг</button>
+                <button class="courses_intro_box_button">Дизайн</button>
+                <button class="courses_intro_box_button">Аналитика</button>
+                <button class="courses_intro_box_button">Финансы</button>
+                <button class="courses_intro_box_button">Управление</button>
+                <button class="courses_intro_box_button">Контент-маркетинг</button>
+                <button class="courses_intro_box_button">Иностранные языки</button>
+                <button class="courses_intro_box_button">Личностный рост</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses_collections">
+        <div class="container">
+            <div class="courses_collections_box">
+                <button class="courses_collections_box_filter_mobile_open" onclick="openFilterInMobile()">Фильтры</button>
+                <div class="courses_sidebar" id="filters">
+                    <button class="courses_collections_box_filter_mobile_close" onclick="closeFilterInMobile()"><img src="../images/closeButton.svg" alt=""></button>
+                    <h2 id="courses_result_count">Найдено 0 курсов</h2>
+                    <h3>Фильтры</h3>
+
+                    <div class="filter-group">
+                        <strong>Цена</strong><br>
+                        <label><input type="checkbox" name="price" value="paid"> Платные</label>
+                        <label><input type="checkbox" name="price" value="free"> Бесплатные</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <strong>Школы</strong><br>
+                        <label><input type="checkbox" name="school" value="Skillbox"> Skillbox</label>
+                        <label><input type="checkbox" name="school" value="Geekbrains"> Geekbrains</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <strong>Уровень</strong><br>
+                        <label><input type="checkbox" name="level" value="Начальный"> Начальный</label>
+                        <label><input type="checkbox" name="level" value="Профи"> Профи</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <strong>Длительность</strong><br>
+                        <input type="range" id="duration" min="0" max="12" value="3">
+                        <div>До <span id="durationValue">3</span> месяцев</div>
+                    </div>
+                </div>
+
+                <div class="courses_content">
+                    <div class="courses_render" id="courseList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses_other">
+        <div class="container">
+            <div class="courses_other_box">
+                <h2 class="courses_other_title">Другие категории курсов по направлению программирование</h2>
+                <ul>
+                    <li>Python-разработка<br>Web-разработка<br>Мобильная
+                        разработка<br>JavaScript-разработка<br>Java-разработка<br>Разработка игр<br>Создание
+                        сайтов<br>Системное администрирование<br>QA-тестирование<br>Управление разработкой и IT</li>
+                    <li>Android-разработка<br>Frontend-разработка<br>Разработка игр на Unity<br>Разработка на
+                        C#<br>PHP-разработка<br>DevOps<br>Верстка на HTML/CSS<br>IOS-разработка<br>Разработка на
+                        C++<br>Фреймворк Django</li>
+                    <li>Разработка игр на Unreal Engine<br> Фреймворк Node.js<br>Разработка на Kotlin<br>Информационная
+                        безопасность<br>Golang-разработка<br>Разработка на Swift<br>Фреймворк ReactJS<br>Фреймворк
+                        Spring<br>VR/AR разработка<br>1C-разработка</li>
+                    <li>Фреймворк Laravel<br>Фреймворк Flutter<br>Работа с GIT</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses_schools">
+        <div class="container">
+            <div class="courses_schools_box">
+                <h2 class="courses_schools_title">Онлайн-школы преподающие программирование</h2>
+                <div class="courses_schools_mini">
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h4><img src="../images/starIcon.svg" alt=""> 4.5</h4>
+                        <p>Отзывы о школе 58</p>
+                    </div>
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h5>178 курсов по 48 темам</h5>
+                        <button>Программирование</button>
+                    </div>
+                    <div>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="courses_schools_mini">
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h4><img src="../images/starIcon.svg" alt=""> 4.5</h4>
+                        <p>Отзывы о школе 58</p>
+                    </div>
+                    <div>
+                        <h3>Skillbox</h3>
+                        <h5>178 курсов по 48 темам</h5>
+                        <button>Программирование</button>
+                    </div>
+                    <div>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_top">
+                <ul>
+                    <h2>КАТЕГОРИИ</h2>
+                    <li>
+                        <a href="#">Программирование</a>
+                    </li>
+                    <li>
+                        <a href="#">Маркетинг</a>
+                    </li>
+                    <li>
+                        <a href="#">Дизайн</a>
+                    </li>
+                    <li>
+                        <a href="#">Управление</a>
+                    </li>
+                    <li>
+                        <a href="#">Контент-маркетинг</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>ШКОЛЫ</h2>
+                    <li>
+                        <a href="#">Skillbox</a>
+                    </li>
+                    <li>
+                        <a href="#">Geekbrains</a>
+                    </li>
+                    <li>
+                        <a href="#">Нетология</a>
+                    </li>
+                    <li>
+                        <a href="#">Skillfactory</a>
+                    </li>
+                    <li>
+                        <a href="#">Convertmonster</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>ОТЗЫВЫ О ШКОЛАХ</h2>
+                    <li>
+                        <a href="#">Отзывы о Skillbox</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Geekbrains</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Нетология</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Skillfactory</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы о Convertmonster</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>КУРСЫ</h2>
+                    <li>
+                        <a href="#">С дипломом</a>
+                    </li>
+                    <li>
+                        <a href="#">С трудоустройстовом</a>
+                    </li>
+                    <li>
+                        <a href="#">Платные</a>
+                    </li>
+                    <li>
+                        <a href="#">Бесплатные</a>
+                    </li>
+                    <li>
+                        <a href="#">Ближайшие по дате старта</a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>УРОВЕНЬ СЛОЖНОСТИ</h2>
+                    <li>
+                        <a href="#">Начальный</a>
+                    </li>
+                    <li>
+                        <a href="#">Средний</a>
+                    </li>
+                    <li>
+                        <a href="#">Профессиональный</a>
+                    </li>
+                    <li>
+                        <a href="#">Для детей</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <div>
+                    <h2>LOGO</h2>
+                    <h4>© 2021. Logo. Все права защищены</h4>
+                </div>
+                <div>
+                    <img src="../images/vkLogo.svg" alt="logo">
+                    <img src="../images/telegramLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <img src="../images/instagramLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <img src="../images/youtubeLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <img src="../images/facebookLogo.svg" alt="logo" style="margin-left: 15px;">
+                    <h3>Пользовательское соглашение</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/courses.js"></script>
+</body>
+
+</html>

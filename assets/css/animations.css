@@ -1,0 +1,67 @@
+.navbar_link a:hover {
+    color: var(--green);
+}
+
+.navbar_exchange_button:hover img {
+    transform: scale(1.1);
+}
+
+.courses_container_left_button:hover {
+    font-weight: 700;
+    background-color: var(--white);
+}
+
+.platforms_prev:hover {
+    color: var(--green);
+    background-color: var(--white);
+    box-shadow: 0px 0px 0px 1px var(--green);
+}
+
+.platforms_next:hover {
+    color: var(--green);
+    background-color: var(--white);
+    box-shadow: 0px 0px 0px 1px var(--green);
+}
+
+.collections_link:hover {
+    color: var(--white);
+    background-color: var(--green);
+    border-radius: 55px;
+}
+
+.collections_render_box div:nth-of-type(6) a:nth-of-type(1):hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.collections_render_box div:nth-of-type(6) a:nth-of-type(2):hover {
+    color: var(--white);
+    background: var(--green);
+    border: 1px solid var(--green);
+}
+
+.footer_top ul li a:hover {
+    color: var(--white);
+}
+
+.navbar_mobile_menu li a:hover {
+    color: var(--green);
+}
+
+@keyframes navbarBurgerOpening {
+    from {
+        opacity: 0;
+        height: 0px;
+    }
+    to {
+        opacity: 1;
+        height: 500px;
+    }
+}
+
+.courses_intro_box_button:hover {
+    color: var(--white);
+    background: var(--green);
+    border-radius: 50px;
+}

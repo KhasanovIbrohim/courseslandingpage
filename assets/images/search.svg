@@ -1,0 +1,15 @@
+<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip1_326">
+			<rect id="loupe (6) 1" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="loupe (6) 1" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip1_326)">
+		<path id="Vector" d="M8.8 0C3.95 0 0 3.95 0 8.8C0 13.66 3.95 17.61 8.8 17.61C13.66 17.61 17.61 13.66 17.61 8.8C17.61 3.95 13.66 0 8.8 0ZM8.8 15.98C4.84 15.98 1.62 12.76 1.62 8.8C1.62 4.84 4.84 1.62 8.8 1.62C12.76 1.62 15.98 4.84 15.98 8.8C15.98 12.76 12.76 15.98 8.8 15.98Z" fill="#B5B5B5" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M19.76 18.61L15.1 13.95C14.78 13.63 14.26 13.63 13.95 13.95C13.63 14.26 13.63 14.78 13.95 15.1L18.61 19.76C18.77 19.92 18.97 20 19.18 20C19.39 20 19.6 19.92 19.76 19.76C20.07 19.44 20.07 18.92 19.76 18.61Z" fill="#B5B5B5" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
